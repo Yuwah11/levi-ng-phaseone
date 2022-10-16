@@ -1,0 +1,14 @@
+<div class="portfolio mb-30" [routerLink]="['/' + project.title]">
+    <div class="portfolio__thumb pos-rel">
+        <img class="img-fluid" [src]="project.img[0]" alt="">
+    </div>
+    <div class="portfolio__text pos-abl text-center">
+        <h3><a>{{ project.title }}</a></h3>
+        <p *ngIf="project.location">@ {{ project.location }}</p>
+        <div class="portfolio__icon">
+            <a class=""><i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+
+
+    </div>
+</div>

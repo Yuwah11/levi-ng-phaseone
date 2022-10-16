@@ -1,0 +1,16 @@
+.navbar-light .navbar-nav .nav-link{
+    cursor:pointer;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    font-weight:bold;
+}
+
+.navbar-brand img{
+    max-width: 75%;
+}
+
+.navbar{
+    padding-top: 0.7em;
+    padding-bottom:0.7em;
+}

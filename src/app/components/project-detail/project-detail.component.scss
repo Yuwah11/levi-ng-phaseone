@@ -1,0 +1,114 @@
+.page-title-area {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 200px;
+}
+
+@media (max-width: 767px) {
+    .breadcrumb-list ul li {
+        font-size: 20px;
+    }
+    .page-title-area::before {
+        top: 60px !important;
+    }
+}
+
+.breadcrumb-list ul li {
+    display: inline-block;
+    color: white;
+    font-size: 19px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.breadcrumb-list ul li:nth-child(2)::before {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 2px;
+    height: 20px;
+    z-index: 1;
+}
+
+.breadcrumb-list ul li:nth-child(2)::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 2px;
+    height: 20px;
+    z-index: 1;
+}
+
+.page-title-area::before {
+    content: "";
+    background-color: #051401;
+    opacity: 0.651;
+    position: absolute;
+    left: 0;
+    top: 81px;
+    width: 100%;
+    min-height: 200px;
+}
+
+.page-title {
+    padding-top: 55px;
+    h2 {
+        color: #fff;
+        position: relative;
+        font-size: 40px;
+        font-family: 'darling'
+    }
+}
+
+a {
+    color: #fff;
+}
+
+section.image {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.one-section-title {
+    text-align: left;
+    h2 {
+        font-size: 30px;
+    }
+    margin-bottom:30px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.post-img img {
+    max-width: 100%;
+    display: block;
+}
+
+figure {
+    margin-bottom: 1.8em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-image:nth-last-child(n+2):nth-last-child(-n+2):first-child,
+.post-image:nth-last-child(n+2):nth-last-child(-n+2):first-child~.post-image {
+    flex: 0 1 48%;
+}
+
+.post-image:nth-last-child(n+3):nth-last-child(-n+3):first-child,
+.post-image:nth-last-child(n+3):nth-last-child(-n+3):first-child~.post-image {
+    flex: 0 1 31%;
+}
+
+// if we have three images in the row change width to about a third
+img {
+    margin-bottom: 25px;
+}

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<section class="page-title-area pos-rel" style="background-image: url(../../../../assets/img/banner2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="page-title text-center pt-180">
+                    <h2>{{project.title}}</h2>
+                    <div class="breadcrumb-list text-center">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li>Project Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="image">
+    <div class="container">
+        <div class="one-section-title">
+            <span class="sub-title">WHAT WE HAVE DONE</span>
+            
+            <div><h2>{{project.title}} <span *ngIf="project.location">@ {{project.location}}</span></h2>
+            </div>
+            
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4" *ngFor="let images of image; let i=index" [id]="images.RefID + i">
+                <img class="img-fluid" [src]="images" alt="" (click)="showPopup(images.RefID + i)">
+            </div>
+        </div>
+        <!-- <div class="wrapper">
+            <figure >
+                <div class="post-image" *ngFor="let images of image"><img [src]="images" /></div>
+            </figure>
+            
+        </div> -->
+
+    </div>
+</section>
+
+<app-slider-popup [project_image]="image" *ngIf="popupShow" [selected]="paramID"></app-slider-popup>
+
+<app-footer></app-footer>
