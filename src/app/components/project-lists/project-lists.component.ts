@@ -2,6 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { element } from 'protractor';
 import { ProjectlistService } from '../projectlist.service';  
 
 @Component({
@@ -42,18 +43,24 @@ export class ProjectListsComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(params => {
       this.cat = params.get('cat');
       });
-      if(this.cat == 'artificial-landscaping' || this.cat == 'landscape-supply-install'){
+      if(this.cat == 'artificial-landscaping' || this.cat == 'landscape-supply-install' || this.cat == 'plant-nursery'){
     this.getprojectbyCat(this.cat)
 
     this.routeLink = this.location.path()
+
+    ///this.scroller.scrollToAnchor("landscapesection");
   }
   else{
+    this.routeLink = this.location.path()
+    if(this.routeLink == 'projects'){
+      var link = document.getElementById('project')
+      link.classList.add('active')
+    }
     this.getallprojects()
+    //this.scroller.scrollToAnchor("landscapesection");
   } 
    }
   ngOnInit(): void {
-    //this.category = this.activatedRoute.parent.snapshot.url[1].path;
-    
   }
   getallprojects(){
     this.projects = this.projectlist_.ProjectList
@@ -65,7 +72,10 @@ export class ProjectListsComponent implements OnInit {
     else if(id == 'artificial-landscaping'){
       this.projects = this.grouped[id]
     }
-    this.scroller.scrollToAnchor("landscape");
+    else if(id == 'plant-nursery'){
+      this.projects = this.grouped[id]
+    }
+   
   }
 
   navigate(param : any){

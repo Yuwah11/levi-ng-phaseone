@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
 
-            <li class="nav-item"><a class="nav-link" (click)="navigate('/')">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="navigate('/')" id="aboutus">ABOUT US</a></li>
 
             <li class="nav-item"><a class="nav-link" (click)="navigate('services')" [ngClass]="{'active' : routeLink.includes('services')}">SERVICES</a></li>
 
@@ -20,7 +20,7 @@
         </ul>
     </div>
 
-    <div class="side-nav">
+    <!-- <div class="side-nav">
         <a class="side-nav-right cd-signup" routerLink="/"><i class='bx bx-link-external'></i>SUBSCRIBE</a>
-    </div>
+    </div> -->
 </nav>

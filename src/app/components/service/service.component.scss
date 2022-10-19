@@ -9,14 +9,7 @@
     min-height: 200px;
 }
 
-@media (max-width: 767px) {
-    .breadcrumb-list ul li {
-        font-size: 20px;
-    }
-    .page-title-area::before {
-        top: 60px !important;
-    }
-}
+
 
 .breadcrumb-list ul li {
     display: inline-block;
@@ -100,4 +93,19 @@ a {
 
 .two-among-area .among-item .among-bottom {
     border: 1px solid #dddddd82;
+}
+
+@media (max-width: 767px) {
+    .breadcrumb-list ul li {
+        font-size: 20px;
+    }
+    .page-title-area::before {
+        top: 60px !important;
+    }
+    .one-among-area{
+        padding-top:50px;
+    }
+    .one-section-title h2{
+        font-size:28px;
+    }
 }

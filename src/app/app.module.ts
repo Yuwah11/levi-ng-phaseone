@@ -15,6 +15,9 @@ import { SliderPopupComponent } from './components/slider-popup/slider-popup.com
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectListsComponent } from './components/project-lists/project-lists.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,14 @@ import { ProjectListsComponent } from './components/project-lists/project-lists.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+
+//     HttpClientInMemoryWebApiModule.forRoot(
+//     InMemoryDataService, {dataEncapsulation: false, }
+// )
   ],
   providers: [],
   bootstrap: [AppComponent]

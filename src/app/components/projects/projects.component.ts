@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   //@Input()property!: property;
   @Input() project : any;
   @Input() cat : string
+  scroller: any;
 
   constructor(
     private router : Router,
@@ -21,7 +22,6 @@ export class ProjectsComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log(this.project, 'ttt')
   }
 
 

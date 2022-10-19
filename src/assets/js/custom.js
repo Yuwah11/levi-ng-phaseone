@@ -237,7 +237,7 @@ jQuery(function ($) {
 		}
 	}); 
 	$('#toTop').on('click', function(){
-		$("html, body").animate({ scrollTop: 0 }, 900);
+		$("html, body").animate({ scrollTop: 0 }, 5000);
 		return false;
 	});
 	

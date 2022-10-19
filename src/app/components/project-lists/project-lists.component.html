@@ -35,18 +35,19 @@
 </div> -->
 
 <section class="three-loan-area four-loan-area five-loan-area pt-100">
-    <div class="container" id="landscape">
+    <div class="container">
         <div class="one-section-title three-section-title">
             <span class="sub-title"># What We have done</span>
-            <h2>Selected Projects (Only)</h2>
+            <h2 id="landscapesection">Selected Projects (Only)</h2>
         </div>
 
         <div class="sorting-menu">
             <ul> 
                 <!-- <li class="filter active" data-filter="all"><i class='bx bx-cart'></i> PURCHASE</li> -->
-                <li class="filter" (click)="navigate('artificial-landscaping')" [ngClass]="{'active' : routeLink.includes('artificial-landscaping' || 'projects')}">Artificial Landscaping</li>
-                <li class="filter" (click)="navigate('landscape-supply-install')" [ngClass]="{'active' : routeLink.includes('landscape-supply-install')}">Landscape Supply Install</li>
-                <li class="filter" (click)="navigate('plant-nursery ')">Plant Nursery</li>
+                <li class="filter" (click)="navigate('projects')" [ngClass]="{'active' : routeLink.includes('projects')}" id="project"><span>All Projects</span></li>
+                <li class="filter" (click)="navigate('artificial-landscaping')" [ngClass]="{'active' : routeLink.includes('artificial-landscaping')}"><span>Artificial Landscaping</span></li>
+                <li class="filter" (click)="navigate('landscape-supply-install')" [ngClass]="{'active' : routeLink.includes('landscape-supply-install')}"><span>Landscape Supply Install</span></li>
+                <li class="filter" (click)="navigate('plant-nursery')" [ngClass]="{'active' : routeLink.includes('plant-nursery')}"><span>Plant Nursery</span></li>
 
             </ul>
         </div>

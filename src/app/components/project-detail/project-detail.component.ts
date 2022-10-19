@@ -15,6 +15,8 @@ export class ProjectDetailComponent implements OnInit {
   category;
   popupShow : boolean = false
   paramID : string
+  scroller: any;
+  router: any;
 
   constructor(
     private activatedRoute : ActivatedRoute,
@@ -30,11 +32,16 @@ export class ProjectDetailComponent implements OnInit {
     this.project = this.projectlist_.ProjectList.find(x => x.title == this.name && x.category == this.category)
     //alert(this.category)
     this.image = this.project.img
+    this.scroller.scrollToAnchor("landscape");
   }
 
   showPopup(id : string){
     this.popupShow  = true
     this.paramID = id
+  }
+
+  navigate(param : any){
+    this.router.navigate(['/' + param])
   }
 
 }

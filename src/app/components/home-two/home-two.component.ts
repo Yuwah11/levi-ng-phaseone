@@ -21,8 +21,8 @@ export class HomeTwoComponent implements OnInit {
     this.router.navigate(['/' + param])
   }
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior: 'smooth'});
-}
+//   scroll(el: HTMLElement) {
+//     el.scrollIntoView({behavior: 'smooth'});
+// }
 
 }

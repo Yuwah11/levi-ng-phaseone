@@ -45,3 +45,12 @@
 .one-footer-area .footer-item .footer-quick ul li a:visited {
     color: #bdcbd5 !important;
   }
+
+  @media only screen and (max-width: 767px) {
+    .footer-logo img{
+        width: 45%;
+    }
+    .one-footer-area{
+        padding-top: 50px;
+    }
+  }

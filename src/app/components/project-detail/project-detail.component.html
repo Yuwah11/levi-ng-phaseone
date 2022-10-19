@@ -7,7 +7,8 @@
                     <h2>{{project.title}}</h2>
                     <div class="breadcrumb-list text-center">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a (click)="navigate('')">Home</a></li>
+                            <li><a (click)="navigate('projects')" style="cursor:pointer">Projects Lists</a></li>
                             <li>Project Details</li>
                         </ul>
                     </div>
@@ -18,7 +19,7 @@
 </section>
 <section class="image">
     <div class="container">
-        <div class="one-section-title">
+        <div class="one-section-title" id="landscape">
             <span class="sub-title">WHAT WE HAVE DONE</span>
             
             <div><h2>{{project.title}} <span *ngIf="project.location">@ {{project.location}}</span></h2>

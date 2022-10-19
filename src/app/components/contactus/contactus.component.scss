@@ -157,3 +157,12 @@ h2.formgroup {
 .map {
     padding-top: 40px;
 }
+
+@media (max-width: 767px) {
+    .five-about-area {
+        padding-top:50px;
+    }
+    .three-about-area .about-img{
+        padding-right:0;
+    }
+}

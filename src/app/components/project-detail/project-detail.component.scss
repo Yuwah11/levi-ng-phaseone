@@ -17,7 +17,7 @@
 .breadcrumb-list ul li {
     display: inline-block;
     color: white;
-    font-size: 19px;
+    font-size: 16px;
     position: relative;
     padding: 0 20px;
 }
@@ -27,9 +27,9 @@
     background: white;
     position: absolute;
     left: 0;
-    top: 6px;
-    width: 2px;
-    height: 20px;
+    top: 4px;
+    width: 1px;
+    height: 18px;
     z-index: 1;
 }
 
@@ -38,9 +38,31 @@
     background: white;
     position: absolute;
     left: 6px;
-    top: 6px;
-    width: 2px;
-    height: 20px;
+    top: 4px;
+    width: 1px;
+    height: 18px;
+    z-index: 1;
+}
+
+.breadcrumb-list ul li:nth-child(3)::before {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 1px;
+    height: 18px;
+    z-index: 1;
+}
+
+.breadcrumb-list ul li:nth-child(3)::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    width: 1px;
+    height: 18px;
     z-index: 1;
 }
 
